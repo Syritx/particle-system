@@ -35,7 +35,7 @@ namespace perlin_noise_visualization.src.rendering {
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, IndexBufferArray);
 
             GL.VertexAttribPointer(0, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), 0);
-            GL.VertexAttribPointer(1, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 3 * sizeof(float));
+            GL.VertexAttribPointer(1, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 2 * sizeof(float));
             
             GL.EnableVertexAttribArray(0);
             GL.EnableVertexAttribArray(1);

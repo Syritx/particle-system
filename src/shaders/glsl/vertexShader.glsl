@@ -101,11 +101,11 @@ void main() {
     float u = noise(s, p, n*324);
     float v = noise(u, p*284, p*n*u);
 
-    float x = noise(n+v, p+tx+v/247824, s);
-    float y = noise(p+ty+u, n+u/247824, s);
-    float z = noise(u+v+ty, n+p+tx/247824, s);
+    float x = noise(n+v, p+tx+v/234, v-u);
+    float y = noise(p+ty+u, n+u/123, u-v);
+    float z = noise(u+v+tx, n+u+tx/235, u+v);
     
-    vec3 vertex = normalize(vec3(x*1000, y*1000, z*1000))*300;
+    vec3 vertex = vec3(x*1000, y*1000, z*1000)*1;
     multiplier = 1;
 
     vertex_color = color;
